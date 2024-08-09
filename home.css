@@ -11,6 +11,10 @@
   font-size: 16px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden; /* Prevent horizontal scrolling */
 }
@@ -23,7 +27,7 @@ body {
   left: 0;
   right: 0;
 
-  padding: 20px 10%;
+  padding: 16px 10%;
 
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(6px);
@@ -32,32 +36,57 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* z-index: 100; */
-}
-
-.logo {
-  font-size: 1.5rem;
-  color: black;
-  text-decoration: none;
-  font-weight: 600;
-  cursor: pointer;
+  z-index: 100;
 }
 
 .nav a {
-  padding: 4px;
+  padding: 8px;
   border: 4px solid none;
   border-radius: 2px;
 
   text-decoration: none;
   font-size: 1.25rem;
-  margin-left: 35px;
+  margin-left: 28px;
   color: black;
+  position: relative; /* To position the pseudo-elements */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.nav a::before,
+.nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #ffc300;
+  /* transition: width 0.3s ease; */
+  transition: width 0.4s ease, left 0.4s ease; /* Add transition for left property */
+}
+
+.nav a::before {
+  top: 0; /* Position at the top of the anchor */
+  left: 50%; /* Start from the middle */
+  transform: translateY(-50%); /* Adjust to center from the middle */
+}
+
+.nav a::after {
+  bottom: 0; /* Position at the bottom of the anchor */
+  left: 50%; /* Start from the middle */
+  transform: translateY(-50%); /* Adjust to center from the middle */
 }
 
 .nav a:hover {
-  color: white;
-  background-color: rgb(41, 81, 100);
+  color: #ffc300; /* Change text color to blue */
 }
+
+.nav a:hover::before,
+.nav a:hover::after {
+  width: 100%; /* Expand underline to full width */
+  left: 0; /* Move to start from the beginning of the element */
+  transform: none; /* Remove transform to extend underline */
+}
+
+/*MAIN PAGE*/
 
 .main {
   background: center/cover url(Pictures/colorful-pattern.jpg) no-repeat;
@@ -70,12 +99,197 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 50px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ring-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
 }
 
 .main-pic {
-  border-radius: 30%;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* Ring effect */
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 1;
+  border: 9.5px solid #ffc300;
+  animation: radiate 4s infinite linear;
+}
+
+.ring:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+.ring:nth-child(3) {
+  animation-delay: 1.6s;
+}
+
+.ring:nth-child(4) {
+  animation-delay: 2.4s;
+}
+
+.ring:nth-child(5) {
+  animation-delay: 3.2s;
+}
+
+@keyframes radiate {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.25);
+    opacity: 0;
+  }
+}
+
+.title h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.title h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: -3px 0;
+}
+
+.title p {
+  color: white;
+  font-size: 1.25rem;
 }
 
 .text {
-  color: rgb(255, 0, 0);
+  color: #ffc300;
+  font-size: 2.5rem;
+}
+
+.typed-cursor {
+  font-size: 2.5rem; /* Adjust the size to be larger */
+  line-height: 0.75; /* position the cursor properly */
+}
+
+/*ABOUT STARTS HERE*/
+
+.about {
+  padding: 20px 10%;
+
+  margin-bottom: 50px;
+}
+.about-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.about-content-area {
+  display: flex;
+  justify-content: space-around;
+}
+
+.about-content-area img {
+  border: 6px solid #ffc300;
+  border-radius: 20px;
+}
+
+.about-content-area p {
+  margin-left: 50px;
+  font-size: 1.5rem;
+}
+
+/*SKILLS START HERE*/
+
+/* .skill {
+  padding: 20px 10%;
+  width: 100%;
+
+  margin-bottom: 50px;
+}
+
+.skill-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.skill-content-area {
+  display: flex;
+  justify-content: space-around;
+}
+
+.skill-content-area div {
+  width: 33.3%;
+  height: 500px;
+  padding: 10px 20px;
+  border: 5px solid rgb(186, 184, 197);
+  border-radius: 50px;
+  margin: 10px;
+}
+
+.skill-content-area h3 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.code img {
+  max-width: 25%;
+  height: auto;
+  object-fit: cover;
+} */
+
+/*FOOTER START HERE*/
+
+.footer {
+  background-color: rgb(186, 184, 197);
+  width: 100%;
+  padding: 20px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer h1,
+.footer p {
+  margin: 5px;
+  padding: 5px 0;
+}
+
+.footer .social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.footer a img {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.3s ease;
+}
+
+.footer a img:hover {
+  transform: translateY(-10px); /* Move icon upward on hover */
 }
