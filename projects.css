@@ -100,6 +100,7 @@ body {
 }
 
 /* MAIN PICTURE */
+/* MAIN PICTURE */
 
 .main {
   background: top/cover url(Pictures/sub_page2.png) no-repeat;
@@ -126,33 +127,19 @@ body {
   margin-bottom: 8px;
 }
 
+.main p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 /* Project Body Start here */
-
-/* .projects {
-  padding: 0px 20px;
-  border: 0px;
-  margin: 0px 10%;
-}
-
-.holding {
-  padding-top: 80px;
-
-  display: flex;
-  flex-wrap: wrap;
-  align-content: stretch;
-}
-
-.holding figure {
-  width: 31vw;
-  height: 300px;
-  margin: 8px;
-  border: 1px solid black;
-} */
+/* Project Body Start here */
 
 .projects {
   padding: 0px 20px;
   border: 0px;
-  margin: 0px 10%;
+  margin: 0px 8%;
+  margin-bottom: 40px;
 }
 
 .holding {
@@ -161,7 +148,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
   grid-template-rows: repeat(3, 1fr); /* 3 rows */
-  gap: 10px; /* Space between boxes */
+  gap: 16px; /* Space between boxes */
   width: 100%;
   /* height: calc(100vh - 80px); Subtracting padding-top from viewport height */
 }
@@ -183,16 +170,11 @@ body {
   border-color: #ff7b00;
 }
 
-/* .holding img {
-  width: 100%;
-  height: auto;
-} */
-
 .information {
   padding: 18px 20px 10px;
   /* display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center; */
 }
 
@@ -200,10 +182,6 @@ body {
 .information p,
 .information div {
   margin: 5px 0;
-}
-
-.information p {
-  font-size: 0.8rem;
 }
 
 /* Responsive adjustments */
@@ -230,8 +208,33 @@ figure img {
   right: 0;
 }
 
+.information span {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #007bff;
+  background-color: #ffffff;
+
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  padding: 1px 3px;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.information span:hover {
+  color: #ffffff;
+  background-color: #ff7b00;
+  border-color: #ff7b00;
+  cursor: pointer;
+}
+
+#space-for-span {
+  margin-top: 8px;
+}
+
 #statement {
   margin: 10px 0;
+  font-size: 1rem;
 }
 
 .links a {
