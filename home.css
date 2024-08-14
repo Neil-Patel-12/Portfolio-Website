@@ -197,6 +197,30 @@ body {
   line-height: 0.75; /* position the cursor properly */
 }
 
+.resume-button {
+  text-align: center;
+  padding: 10px 20px;
+  border: 4px solid rgb(40, 71, 99);
+  border-radius: 30px;
+  margin: 10px 5px 5px 0px;
+
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: rgb(40, 71, 99);
+  transition: all 0.2s ease-in-out;
+}
+
+.resume-button:hover {
+  background-color: rgb(40, 71, 99);
+  color: white;
+  cursor: pointer;
+}
+
+.resume-button:active {
+  background-color: #ee5a50;
+  border-color: #ee5a50;
+}
+
 /*ABOUT STARTS HERE*/
 
 .about {
@@ -206,7 +230,7 @@ body {
   padding: 20px;
   border-radius: 40px;
 
-  background-color: rgb(212, 210, 224);
+  background-color: #cbb2b2;
 }
 .about-title {
   text-align: center;

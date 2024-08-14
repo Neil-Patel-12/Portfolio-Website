@@ -136,15 +136,21 @@ body {
 /* Project Body Start here */
 
 .projects {
-  padding: 0px 20px;
+  /* padding: 0px 20px;
   border: 0px;
   margin: 0px 8%;
-  margin-bottom: 40px;
+  margin-bottom: 40px; */
+
+  padding: 20px;
+  margin: 30px 10%;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .holding {
-  padding-top: 80px;
-  padding-bottom: 10px;
+  /* padding-top: 80px;
+  padding-bottom: 10px; */
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
   grid-template-rows: repeat(3, 1fr); /* 3 rows */
@@ -154,7 +160,7 @@ body {
 }
 
 .holding figure {
-  border: 3px solid rgb(200, 198, 211);
+  border: 3px solid #cbb2b2;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -162,7 +168,7 @@ body {
   /* padding: 10px; */
   border-radius: 20px;
 
-  background-color: rgb(200, 198, 211);
+  background-color: #cbb2b2;
   transition: all 0.3s ease;
 }
 
@@ -239,7 +245,7 @@ figure img {
 
 .links a {
   padding: 2px 8px;
-  border: 3px solid rgb(160, 157, 157);
+  border: 3px solid white;
   border-radius: 16px;
 
   color: black;

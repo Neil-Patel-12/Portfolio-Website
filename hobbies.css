@@ -132,7 +132,75 @@ body {
   text-align: center;
 }
 
-/**/
+/*PICTURES*/
+
+/* .photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px; 
+  padding: 16px 10%;
+  margin-top: 30px;
+}
+
+.photo-gallery .gallery-item {
+  overflow: hidden;
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-gallery .gallery-item img {
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.photo-gallery .gallery-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.photo-gallery .gallery-item img:hover {
+  transform: scale(1.05);
+} */
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 16px; /* Space between grid items */
+  /* padding: 16px 10%;
+  margin-top: 30px; */
+
+  padding: 20px;
+  margin: 30px 10%;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photo-gallery .gallery-item {
+  position: relative;
+  overflow: hidden; /* Hide any overflow from images */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-gallery .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images cover the grid cell without distortion */
+  display: block; /* Prevent margin collapse */
+  transition: transform 0.3s ease;
+}
+
+/* Hover effects for gallery items */
+.photo-gallery .gallery-item:hover {
+  transform: scale(1.02); /* Slight zoom effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
 
 /* FOOTER STARTS HERE */
 
