@@ -142,7 +142,7 @@ body {
   margin-bottom: 40px; */
 
   padding: 20px;
-  margin: 30px 10%;
+  margin: 30px 5%;
   background-color: #f1f1f1;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -215,6 +215,7 @@ figure img {
 }
 
 .information span {
+  display: inline-block;
   font-size: 0.9rem;
   font-weight: 700;
   color: #007bff;
@@ -225,6 +226,7 @@ figure img {
   padding: 1px 3px;
 
   transition: all 0.3s ease-in-out;
+  margin-bottom: 4px;
 }
 
 .information span:hover {
