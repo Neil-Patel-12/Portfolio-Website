@@ -2,9 +2,10 @@ var typed = new Typed(".text", {
   strings: [
     "Full-Stack Developer",
     "Problem Solver",
-    "Software Engineer",
-    "Life Long Learner",
+    "future Software Engineer",
+    "College Student",
     "8 Ball Pool Player",
+    "Recreational Youtuber",
   ],
   typeSpeed: 60,
   backSpeed: 30,
