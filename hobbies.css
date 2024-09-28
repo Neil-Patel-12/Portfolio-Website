@@ -134,6 +134,14 @@ body {
   text-align: center;
 }
 
+.snapchat {
+  background-color: #FFFC00;
+  color: black;
+  padding: 8px;
+  margin-top: 32px;
+  border-radius: 8px;
+}
+
 /*PICTURES*/
 
 /* .photo-gallery {
