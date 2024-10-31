@@ -135,11 +135,21 @@ body {
 }
 
 .snapchat {
-  background-color: #FFFC00;
+  background-color: #fffc00;
   color: black;
   padding: 8px;
   margin-top: 32px;
   border-radius: 8px;
+  border: 5px solid rgb(255, 136, 45);
+}
+
+.workout {
+  background-color: royalblue;
+  color: white;
+  padding: 8px;
+  margin-top: 8px;
+  border-radius: 12px;
+  border: 5px solid aqua;
 }
 
 /*PICTURES*/
